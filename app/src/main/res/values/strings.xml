@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name">Running App</string>
     <string name="google_map_api_key">AIzaSyBluv5E2s-AL0RXMmD7wLQt0uS5H-FK-II</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="running_app">Running App</string>
+    <string name="your_runs">Your Runs</string>
+    <string name="settings">Settings</string>
+    <string name="statistics">Statistics</string>
+    <string name="continue1">Continue</string>
+    <string name="kg">kg</string>
+    <string name="your_weight">Your Weight</string>
+    <string name="your_name">Your Name</string>
+    <string name="welcome_nplease_enter_your_name_and_weight">Welcome!\nPlease enter your name and weight.</string>
+    <string name="sort_by">Sort by:</string>
+    <string-array name="filter_options">
+        <item>Date</item>
+        <item>Running Time</item>
+        <item>Distance</item>
+        <item>Average Speed</item>
+        <item>Calories Burned</item>
+    </string-array>
 </resources>
