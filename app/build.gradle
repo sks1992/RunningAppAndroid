@@ -78,8 +78,9 @@ dependencies {
     kapt ("com.github.bumptech.glide:compiler:$glide_version")
 
     //library to simplify basic system permissions logic on Android M or higher.
-    //implementation 'pub.devrel:easypermissions:3.0.0'
-    implementation "com.vmadalin:easypermissions-ktx:1.0.0"
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    //implementation "com.vmadalin:easypermissions-ktx:1.0.0"
+
     //A powerful 🚀 Android chart view / graph view library, supporting line- bar-
     // pie- radar- bubble- and candlestick charts as well as scaling, panning and
     // animations.
