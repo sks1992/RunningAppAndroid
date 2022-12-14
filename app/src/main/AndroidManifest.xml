@@ -32,15 +32,16 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-            <!-- for google map-->
-            <meta-data
-                android:name="com.google.android.gsm.version"
-                android:value="@integer/google_play_services_version" />
-            <meta-data
-                android:name="com.google.android.geo.API_KEY"
-                android:value="@string/google_map_api_key" />
-
         </activity>
+
+        <!-- for google map-->
+        <meta-data
+            android:name="com.google.android.gsm.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key"
+            />
     </application>
 
 </manifest>

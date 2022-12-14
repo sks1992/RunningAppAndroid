@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Running App</string>
-    <string name="google_map_api_key">AIzaSyBluv5E2s-AL0RXMmD7wLQt0uS5H-FK-II</string>
+    <string name="api_key">AIzaSyBR2U0QS7lYJaiZnOPia9Suwgt6TkZ28ms</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="running_app">Running App</string>
@@ -13,6 +13,10 @@
     <string name="your_name">Your Name</string>
     <string name="welcome_nplease_enter_your_name_and_weight">Welcome!\nPlease enter your name and weight.</string>
     <string name="sort_by">Sort by:</string>
+    <string name="let_s_go_username">Let\'s go, USERNAME!</string>
+    <string name="finish_run">Finish Run</string>
+    <string name="start">Start</string>
+    <string name="_00_00_00_00">00:00:00:00</string>
     <string-array name="filter_options">
         <item>Date</item>
         <item>Running Time</item>
