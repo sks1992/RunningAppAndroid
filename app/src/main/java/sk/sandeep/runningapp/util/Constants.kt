@@ -1,6 +1,8 @@
 package sk.sandeep.runningapp.util
 
+import android.app.PendingIntent
 import android.graphics.Color
+import android.os.Build
 
 object Constants{
     const val RUNNING_DATABASE_NAME="running_db"
@@ -22,4 +24,9 @@ object Constants{
     const val MAP_ZOOM = 15f
 
     const val  TIMER_UPDATE_INTERVAL =50L
+
+     val flags = when {
+        Build.VERSION.SDK_INT >= Build.VERSION_CODES.M -> PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        else -> PendingIntent.FLAG_UPDATE_CURRENT
+    }
 }
