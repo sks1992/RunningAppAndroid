@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -17,6 +18,7 @@ import sk.sandeep.runningapp.R
 import sk.sandeep.runningapp.adapters.RunAdapter
 import sk.sandeep.runningapp.databinding.FragmentRunBinding
 import sk.sandeep.runningapp.util.Constants.REQUEST_CODE_LOCATION_PERMISSION
+import sk.sandeep.runningapp.util.SortType
 import sk.sandeep.runningapp.util.TrackingUtility
 import sk.sandeep.runningapp.view_model.MainViewModel
 
@@ -31,10 +33,33 @@ class RunFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         super.onViewCreated(view, savedInstanceState)
         requestPermission()
         setUpRecyclerView()
+
+        when (viewModel.sortType) {
+            SortType.DATE -> binding.spFilter.setSelection(0)
+            SortType.RUNNING_TIME -> binding.spFilter.setSelection(1)
+            SortType.DISTANCE -> binding.spFilter.setSelection(2)
+            SortType.AVG_SPEED -> binding.spFilter.setSelection(3)
+            SortType.CALORIES_BURNED -> binding.spFilter.setSelection(4)
+        }
+
+        binding.spFilter.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                when(position){
+                    0 -> viewModel.sortRuns(SortType.DATE)
+                    1 -> viewModel.sortRuns(SortType.RUNNING_TIME)
+                    2 -> viewModel.sortRuns(SortType.DISTANCE)
+                    3 -> viewModel.sortRuns(SortType.AVG_SPEED)
+                    4 -> viewModel.sortRuns(SortType.CALORIES_BURNED)
+                }
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {}
+
+        }
         binding.fab.setOnClickListener {
             findNavController().navigate(R.id.action_runFragment_to_trackingFragment)
         }
-        viewModel.runSortedByDate.observe(viewLifecycleOwner) {
+        viewModel.runs.observe(viewLifecycleOwner) {
             runAdapter.submitList(it)
         }
     }
@@ -56,7 +81,7 @@ class RunFragment : Fragment(), EasyPermissions.PermissionCallbacks {
     }
 
 
-    fun requestPermission() {
+    private fun requestPermission() {
         if (TrackingUtility.hasLocationPermissions(requireContext())) {
             return
         }
@@ -91,6 +116,7 @@ class RunFragment : Fragment(), EasyPermissions.PermissionCallbacks {
 
     override fun onPermissionsGranted(requestCode: Int, perms: List<String>) {}
 
+    //registerForActivityResult
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -101,5 +127,4 @@ class RunFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         // EasyPermissions handles the request result.
         EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this)
     }
-
 }

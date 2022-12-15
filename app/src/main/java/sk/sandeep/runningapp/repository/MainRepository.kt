@@ -12,7 +12,7 @@ class MainRepository @Inject constructor(
 
     fun getAllRunsSortedByDate() = runDAO.getAllRunSortedByDate()
     fun getAllRunsSortedByDistance() = runDAO.getAllRunSortedByDistance()
-    fun getAllRunsSortedByTimeInMillis() = runDAO.getTotalTimeInMillis()
+    fun getAllRunsSortedByTimeInMillis() = runDAO.getAllRunSortedByTimeInMillis()
     fun getAllRunsSortedByAvgSpeed() = runDAO.getAllRunSortedByAvgSpeed()
     fun getAllRunsSortedByCaloriesBurned() = runDAO.getAllRunSortedByCaloriesBurned()
 
