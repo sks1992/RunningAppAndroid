@@ -74,8 +74,10 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
     //for glide to  load image
-    implementation("com.github.bumptech.glide:glide:$glide_version")
-    kapt ("com.github.bumptech.glide:compiler:$glide_version")
+//    implementation("com.github.bumptech.glide:glide:$glide_version")
+//    kapt ("com.github.bumptech.glide:compiler:$glide_version")
+    // Coil for images
+    implementation "io.coil-kt:coil:$coilVersion"
 
     //library to simplify basic system permissions logic on Android M or higher.
     implementation 'pub.devrel:easypermissions:3.0.0'

@@ -19,6 +19,11 @@
     <string name="stop">Stop</string>
     <string name="_00_00_00_00">00:00:00:00</string>
     <string name="cancel_run">Cancel Run</string>
+    <string name="date">DATE</string>
+    <string name="time">TIME</string>
+    <string name="distance">DISTANCE</string>
+    <string name="avgspeed">AVGSPEED</string>
+    <string name="calories">CALORIES</string>
     <string-array name="filter_options">
         <item>Date</item>
         <item>Running Time</item>
