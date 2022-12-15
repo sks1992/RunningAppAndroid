@@ -16,6 +16,7 @@
     <string name="let_s_go_username">Let\'s go, USERNAME!</string>
     <string name="finish_run">Finish Run</string>
     <string name="start">Start</string>
+    <string name="stop">Stop</string>
     <string name="_00_00_00_00">00:00:00:00</string>
     <string-array name="filter_options">
         <item>Date</item>
