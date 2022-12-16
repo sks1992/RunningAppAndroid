@@ -29,4 +29,9 @@ object Constants{
         Build.VERSION.SDK_INT >= Build.VERSION_CODES.M -> PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         else -> PendingIntent.FLAG_UPDATE_CURRENT
     }
+
+    const val SHARED_PREFERENCES_NAME = "sharedPref"
+    const val KEY_FIRST_TIME_TOGGLE = "KEY_FIRST_TIME_TOGGLE"
+    const val KEY_NAME = "KEY_NAME"
+    const val KEY_WEIGHT = "KEY_WEIGHT"
 }

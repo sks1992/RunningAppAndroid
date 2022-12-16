@@ -43,8 +43,13 @@ class RunFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         }
 
         binding.spFilter.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                when(position){
+            override fun onItemSelected(
+                adapterView: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                when (position) {
                     0 -> viewModel.sortRuns(SortType.DATE)
                     1 -> viewModel.sortRuns(SortType.RUNNING_TIME)
                     2 -> viewModel.sortRuns(SortType.DISTANCE)

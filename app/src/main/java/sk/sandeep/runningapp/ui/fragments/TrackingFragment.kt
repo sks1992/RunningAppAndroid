@@ -30,6 +30,7 @@ import sk.sandeep.runningapp.util.Constants.POLYLINE_WIDTH
 import sk.sandeep.runningapp.util.TrackingUtility
 import sk.sandeep.runningapp.view_model.MainViewModel
 import java.util.*
+import javax.inject.Inject
 import kotlin.math.round
 
 @AndroidEntryPoint
@@ -44,7 +45,8 @@ class TrackingFragment : Fragment(), MenuProvider {
     private var menuHost: MenuHost? = null
     private var menu: Menu? = null
 
-    private var weight = 80f
+    @set:Inject
+    var weight = 80f
 
     override fun onCreateView(
         inflater: LayoutInflater,
