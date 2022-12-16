@@ -6,16 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.textview.MaterialTextView
 import dagger.hilt.android.AndroidEntryPoint
 import sk.sandeep.runningapp.R
-import sk.sandeep.runningapp.databinding.ActivityMainBinding
 import sk.sandeep.runningapp.databinding.FragmentSetupBinding
-import sk.sandeep.runningapp.ui.activity.MainActivity
 import sk.sandeep.runningapp.util.Constants.KEY_FIRST_TIME_TOGGLE
 import sk.sandeep.runningapp.util.Constants.KEY_NAME
 import sk.sandeep.runningapp.util.Constants.KEY_WEIGHT

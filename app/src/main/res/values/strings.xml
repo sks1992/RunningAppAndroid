@@ -33,6 +33,8 @@
     <string name="_0kcal">0kcal</string>
     <string name="average_speed">Average Speed</string>
     <string name="_0km_h">0km/h</string>
+    <string name="calories_burned">CALORIES BURNED</string>
+    <string name="duration">DURATION</string>
     <string-array name="filter_options">
         <item>Date</item>
         <item>Running Time</item>

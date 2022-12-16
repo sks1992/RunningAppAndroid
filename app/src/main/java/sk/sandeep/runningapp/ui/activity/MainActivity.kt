@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
             this, R.layout.activity_main
         )
 
-
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         val navController = navHostFragment.findNavController()
@@ -50,6 +49,8 @@ class MainActivity : AppCompatActivity() {
         For Adding BottomNavigation functionality
          * */
         binding.bottomNavigationView.setupWithNavController(navController)
+        //binding.bottomNavigationView.setOnNavigationItemReselectedListener {/*No-OP*/ }
+        binding.bottomNavigationView.setOnItemReselectedListener { /** No OPERATION*/ }
     }
 
     override fun onNewIntent(intent: Intent?) {
