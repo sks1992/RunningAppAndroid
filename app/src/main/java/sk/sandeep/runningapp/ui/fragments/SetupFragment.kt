@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.textview.MaterialTextView
 import dagger.hilt.android.AndroidEntryPoint
 import sk.sandeep.runningapp.R
 import sk.sandeep.runningapp.databinding.ActivityMainBinding
@@ -82,11 +83,7 @@ class SetupFragment : Fragment() {
             .apply()
 
         val toolbarText = "Let's go, ${name}!"
-        (requireActivity() as MainActivity).apply {
-            val binding: ActivityMainBinding =
-                DataBindingUtil.setContentView(this, R.layout.activity_main)
-            binding.tvToolbarTitle.text = toolbarText
-        }
+        requireActivity().findViewById<MaterialTextView>(R.id.tvToolbarTitle).text = toolbarText
         return true
     }
 }

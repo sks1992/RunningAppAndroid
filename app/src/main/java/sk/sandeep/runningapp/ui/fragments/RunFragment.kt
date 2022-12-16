@@ -29,6 +29,17 @@ class RunFragment : Fragment(), EasyPermissions.PermissionCallbacks {
     private lateinit var runAdapter: RunAdapter
     private lateinit var binding: FragmentRunBinding
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = FragmentRunBinding.inflate(inflater, container, false)
+        context ?: return binding.root
+
+        return binding.root
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         requestPermission()
@@ -57,9 +68,7 @@ class RunFragment : Fragment(), EasyPermissions.PermissionCallbacks {
                     4 -> viewModel.sortRuns(SortType.CALORIES_BURNED)
                 }
             }
-
             override fun onNothingSelected(p0: AdapterView<*>?) {}
-
         }
         binding.fab.setOnClickListener {
             findNavController().navigate(R.id.action_runFragment_to_trackingFragment)
@@ -69,15 +78,7 @@ class RunFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentRunBinding.inflate(inflater, container, false)
 
-        return binding.root
-    }
 
     private fun setUpRecyclerView() = binding.rvRuns.apply {
         runAdapter = RunAdapter()

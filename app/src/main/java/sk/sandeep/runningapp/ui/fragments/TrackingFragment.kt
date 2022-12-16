@@ -54,6 +54,8 @@ class TrackingFragment : Fragment(), MenuProvider {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentTrackingBinding.inflate(inflater, container, false)
+        context ?: return binding.root
+
 
         menuHost = requireActivity()
         menuHost?.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
@@ -279,5 +281,4 @@ class TrackingFragment : Fragment(), MenuProvider {
             stopRun()
         }
     }
-
 }

@@ -24,6 +24,15 @@
     <string name="distance">DISTANCE</string>
     <string name="avgspeed">AVGSPEED</string>
     <string name="calories">CALORIES</string>
+    <string name="apply_changes">Apply Changes</string>
+    <string name="total_distance">Total Distance</string>
+    <string name="_0km">0km</string>
+    <string name="total_time">Total Time</string>
+    <string name="_00_00_00">00:00:00</string>
+    <string name="total_calories_burned">Total Calories Burned</string>
+    <string name="_0kcal">0kcal</string>
+    <string name="average_speed">Average Speed</string>
+    <string name="_0km_h">0km/h</string>
     <string-array name="filter_options">
         <item>Date</item>
         <item>Running Time</item>
